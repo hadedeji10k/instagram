@@ -120,10 +120,10 @@ const Homepage = (props) => {
 
       <div className=" container mt-5">
         <section className="container d-flex flex-wrap">
-          {!data ? (
+          {!data2 ? (
             <></>
           ) : (
-            data2.followers.map((item) => (
+            data2.map((item) => (
               <div className="col-12 col-md-6 col-lg-4 p-1">
                 <User img={item.avatar} name={item.username} />
               </div>
