@@ -1,7 +1,7 @@
 {
-  "name": "instagram-scraper",
+  "name": "instagram",
   "version": "1.0.0",
-  "description": "Sample react project for teaching you how to scrap instagram with puppeteer!",
+  "description": "A Web Application to scrap instagram data with puppeteer!",
   "main": "client/src/index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
