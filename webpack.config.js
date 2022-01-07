@@ -12,7 +12,7 @@ module.exports = {
     plugins: [new HtmlWebpackPlugin({
         title: 'App title here',
         template: path.join(__dirname, 'client/templates/index.ejs'),
-        filename: 'index.ejs'
+        filename: 'index.html'
     })],
     module: {
         rules: [

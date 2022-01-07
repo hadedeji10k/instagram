@@ -5,8 +5,6 @@ import User from "./User";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Homepage = (props) => {
-  const header = new Headers();
-  header.append("Access-Control-Allow-Origin", "*");
 
   const [username, setUsername] = useState("");
   const [data, setData] = useState(null);
