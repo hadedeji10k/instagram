@@ -118,6 +118,38 @@ const Homepage = (props) => {
 
       <div className=" container mt-5">
         <section className="container d-flex flex-wrap">
+          {!data2 ? (
+            <></>
+          ) : (
+            data2.map((item) => (
+              <div className="col-12 col-md-6 col-lg-4 p-1">
+                <User img={item.avatar} name={item.username} />
+              </div>
+            ))
+          )}
+        </section>
+      </div>
+
+      <div className=" container mt-5">
+        <section className="container d-flex flex-wrap">
+          {!data ? (
+            <></>
+          ) : (
+              <><div className="col-6 col-md-4 col-lg-3 p-1">
+                <div className="userBox">
+                  <h3>{data.followerCnt}</h3>
+                </div>
+              </div><div className="col-6 col-md-4 col-lg-3 p-1">
+                  <div className="userBox">
+                    <h3>{data.followingCnt}</h3>
+                  </div>
+                </div></>
+          )}
+        </section>
+      </div>
+
+      <div className=" container mt-5">
+        <section className="container d-flex flex-wrap">
           {!data ? (
             <></>
           ) : (
@@ -129,6 +161,7 @@ const Homepage = (props) => {
           )}
         </section>
       </div>
+
     </>
   );
 };

@@ -53,23 +53,23 @@ const script = async (username) => {
     await followersBtn.evaluate((btn) => btn.click());
 
     await page.waitForTimeout(3000).then(() => {});
-    const followersDialog = 'div[role="dialog"] > div > div:nth-child(2)';
+    const followersDialog = 'div[role="dialog"] > div > div > div:nth-child(2)';
     await page.waitForSelector(
-      'div[role="dialog"] > div > div:nth-child(2) > ul'
+      'div[role="dialog"] > div > div > div:nth-child(2) > ul'
     );
     await scrollDown(followersDialog, page);
 
     console.log("getting followers");
     const list1 = await page.$$(
-      'div[role="dialog"] > div > div:nth-child(2) > ul > div > li > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > span > a'
+      'div[role="dialog"] > div > div > div:nth-child(2) > ul > div > li > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > span > a'
     );
     await page.waitForSelector(
-      'div[role="dialog"] > div > div:nth-child(2) > ul > div > li > div > div:nth-child(1) > div:nth-child(1) > div > a > img'
+      'div[role="dialog"] > div > div > div:nth-child(2) > ul > div > li > div > div:nth-child(1) > div:nth-child(1) > div > a > img'
     );
     // const list1 = await page.$$('div[role="dialog"] > div > div:nth-child(2) > ul > div > li > div > div > div:nth-child(2) > div > span > a');
     let avatarPaths = [
-      'div[role="dialog"] > div > div:nth-child(2) > ul > div > li > div > div:nth-child(1) > div:nth-child(1) > div > a > img',
-      'div[role="dialog"] > div > div:nth-child(2) > ul > div > li > div > div:nth-child(1) > div:nth-child(1) > div > a > img',
+      'div[role="dialog"] > div > div > div:nth-child(2) > ul > div > li > div > div:nth-child(1) > div:nth-child(1) > div > a > img',
+      'div[role="dialog"] > div > div > div:nth-child(2) > ul > div > li > div > div:nth-child(1) > div:nth-child(1) > div > a > img',
     ];
 
     // const followersDialog = 'div[role="dialog"] > div:nth-child(2)';
@@ -115,7 +115,7 @@ const script = async (username) => {
     await page.waitForTimeout(2000).then(() => {});
 
     const closeBtn = await page.$(
-      'div[role="dialog"] > div > div:nth-child(1) > div > div:nth-child(3) > button'
+      'div[role="dialog"] > div > div > div:nth-child(1) > div > div:nth-child(3) > button'
     );
     await closeBtn.evaluate((btn) => btn.click());
     console.log("Button Closed");
@@ -128,24 +128,24 @@ const script = async (username) => {
     await followingBtn.evaluate((btn) => btn.click());
     console.log("following buton clicked");
     await page.waitForTimeout(3000).then(() => {});
-    const followingDialog = 'div[role="dialog"] > div > div:nth-child(3)';
+    const followingDialog = 'div[role="dialog"] > div > div > div:nth-child(3)';
     await page.waitForSelector(
-      'div[role="dialog"] > div > div:nth-child(3) > ul'
+      'div[role="dialog"] > div > div > div:nth-child(3) > ul'
     );
     await scrollDown(followingDialog, page);
 
     console.log("getting following");
 
     const list2 = await page.$$(
-      'div[role="dialog"] > div > div:nth-child(3) > ul > div > li > div > div:nth-child(2) > div:nth-child(1) > div > div > span > a'
+      'div[role="dialog"] > div > div > div:nth-child(3) > ul > div > li > div > div:nth-child(2) > div:nth-child(1) > div > div > span > a'
     );
     await page.waitForSelector(
-      'div[role="dialog"] > div > div:nth-child(3) > ul > div > li > div > div:nth-child(1) > div > div > a > img'
+      'div[role="dialog"] > div > div > div:nth-child(3) > ul > div > li > div > div:nth-child(1) > div > div > a > img'
     );
 
     let avatarPaths2 = [
-      'div[role="dialog"] > div > div:nth-child(3) > ul > div > li > div > div:nth-child(1) > div > div > a > img',
-      'div[role="dialog"] > div > div:nth-child(3) > ul > div > li > div > div:nth-child(1) > div > div > a > img',
+      'div[role="dialog"] > div > div > div:nth-child(3) > ul > div > li > div > div:nth-child(1) > div > div > a > img',
+      'div[role="dialog"] > div > div > div:nth-child(3) > ul > div > li > div > div:nth-child(1) > div > div > a > img',
     ];
     // let avatarPaths2 = [
     //     'div[role="dialog"] > div > div:nth-child(3) > ul > div > li > div > div > div > a > img',
@@ -182,7 +182,7 @@ const script = async (username) => {
     );
 
     const closeBtn2 = await page.$(
-      'div[role="dialog"] > div > div:nth-child(1) > div > div:nth-child(3) > button'
+      'div[role="dialog"] > div > div > div:nth-child(1) > div > div:nth-child(3) > button'
     );
     await closeBtn2.evaluate((btn) => btn.click());
     console.log("Following Button Closed");
